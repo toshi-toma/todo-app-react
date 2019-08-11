@@ -1,0 +1,20 @@
+{
+  "name": "todo-app-react",
+  "version": "1.0.0",
+  "description": "A Todo Application  built with React, styled-components, TypeScript, ESLint, Prettier, and Storybook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toshi-toma/todo-app-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toshi-toma/todo-app-react/issues"
+  },
+  "homepage": "https://github.com/toshi-toma/todo-app-react#readme"
+}

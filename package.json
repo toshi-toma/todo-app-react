@@ -4,7 +4,9 @@
   "description": "A Todo Application  built with React, styled-components, TypeScript, ESLint, Prettier, and Storybook",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,28 @@
   "bugs": {
     "url": "https://github.com/toshi-toma/todo-app-react/issues"
   },
-  "homepage": "https://github.com/toshi-toma/todo-app-react#readme"
+  "homepage": "https://github.com/toshi-toma/todo-app-react#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/react": "^5.1.10",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/storybook__addon-actions": "^3.4.3",
+    "@types/storybook__react": "^4.0.2",
+    "@types/styled-components": "^4.1.18",
+    "@types/webpack": "^4.32.1",
+    "babel-loader": "^8.0.6",
+    "react-docgen-typescript-loader": "^3.1.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3"
+  }
 }

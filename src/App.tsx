@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import TodoList from "./Todo/TodoList";
+
 const App = () => {
   const [todos, setTodos] = useState([] as string[]);
   const [inputText, setInputText] = useState("");
@@ -38,16 +40,7 @@ const App = () => {
         </button>
       </header>
       <main>
-        <ul>
-          {todos.map((todo, i) => (
-            <li>
-              <button type="button" onClick={() => handleComplete(i)}>
-                Done
-              </button>
-              {todo}
-            </li>
-          ))}
-        </ul>
+        <TodoList todos={todos} handleComplete={handleComplete} />
       </main>
     </div>
   );

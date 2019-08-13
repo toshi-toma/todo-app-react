@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions";
 import Button from "../index";
 import App from "../App";
 
-storiesOf("Button", module)
+storiesOf("normal", module)
   .add("with text", () => (
     <Button onClick={action("clicked")}>Hello Button</Button>
   ))

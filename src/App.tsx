@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import TodoList from "./Todo/TodoList";
+import Header from "./Header";
 
 const App = () => {
   const [todos, setTodos] = useState([] as string[]);
@@ -25,24 +26,20 @@ const App = () => {
     setTodos(newTodos);
   };
   return (
-    <div>
-      <header>
-        <h1>ToDo App</h1>
-        <input
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            handleNewTodoKeyDown(e)
-          }
-          placeholder="Your Todos"
-          value={inputText}
-        />
+    <>
+      <Header
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          handleNewTodoKeyDown(e)
+        }
+        inputText={inputText}
+      />
+      <main>
         <button type="button" onClick={handleSubmit}>
           Add Todo
         </button>
-      </header>
-      <main>
         <TodoList todos={todos} handleComplete={handleComplete} />
       </main>
-    </div>
+    </>
   );
 };
 

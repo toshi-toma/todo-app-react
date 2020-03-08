@@ -42,7 +42,7 @@
     "@types/styled-components": "4.1.18",
     "@types/webpack": "4.32.1",
     "babel-loader": "8.0.6",
-    "eslint": "5.16.0",
+    "eslint": "6.8.0",
     "eslint-config-airbnb-typescript-prettier": "1.2.1",
     "prettier": "1.18.2",
     "react-docgen-typescript-loader": "3.1.1",

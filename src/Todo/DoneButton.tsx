@@ -8,9 +8,11 @@ const Button = styled.button`
 `;
 
 interface Props {
-  onClick: () => void;
+  handleClick: () => void;
 }
 
-const DoneButton: FC<Props> = () => <Button>Done</Button>;
+const DoneButton: FC<Props> = ({ handleClick }) => (
+  <Button onClick={handleClick}>Done</Button>
+);
 
 export default DoneButton;

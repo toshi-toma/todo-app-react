@@ -9,6 +9,6 @@ interface Props {
   value: string;
 }
 
-const InputForm: FC<Props> = () => <Input />;
+const InputForm: FC<Props> = props => <Input {...props} />;
 
 export default InputForm;

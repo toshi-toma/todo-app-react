@@ -5,12 +5,17 @@ import { action } from "@storybook/addon-actions";
 
 import DoneButton from "../DoneButton";
 import Todo from "../Todo";
-import TodoList from "../TodoList";
+import TodoList, { TodoListType } from "../TodoList";
 
-const todos = ["task1", "task2", "task3", "task4"];
+const todos: TodoListType = [
+  { id: 1, todoTitle: "task1" },
+  { id: 2, todoTitle: "task2" },
+  { id: 3, todoTitle: "task3" },
+  { id: 4, todoTitle: "task4" }
+];
 
 storiesOf("Todo", module)
-  .add("Done Button", () => <DoneButton onClick={action("clicked")} />)
+  .add("Done Button", () => <DoneButton handleClick={action("clicked")} />)
   .add("Todo", () => <Todo todo="My Todo" handleComplete={action("clicked")} />)
   .add("Todo List", () => (
     <TodoList todos={todos} handleComplete={action("clicked")} />

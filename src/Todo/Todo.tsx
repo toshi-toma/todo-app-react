@@ -12,7 +12,7 @@ interface Props {
 
 const Todo: FC<Props> = ({ handleComplete, todo }) => (
   <Item>
-    <DoneButton onClick={handleComplete} />
+    <DoneButton handleClick={handleComplete} />
     {todo}
   </Item>
 );

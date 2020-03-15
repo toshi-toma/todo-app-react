@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
-import TodoList from "./Todo/TodoList";
+import TodoList, { TodoListType } from "./Todo/TodoList";
 import Header from "./Header";
 
+export type Todo = {
+  id: number;
+  todoTitle: string;
+};
+
 const App = () => {
-  const [todos, setTodos] = useState([] as string[]);
+  const [todos, setTodos] = useState<TodoListType>([]);
   const [inputText, setInputText] = useState("");
   const handleNewTodoKeyDown = (event: React.ChangeEvent<HTMLInputElement>) => {
     const val = event.target.value;
@@ -16,15 +21,20 @@ const App = () => {
     if (!inputText) {
       return;
     }
-    setTodos([...todos, inputText]);
+    const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
+    const newTodo = {
+      id,
+      todoTitle: inputText
+    };
+    setTodos([...todos, newTodo]);
     setInputText("");
   };
 
-  const handleComplete = (index: number) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
+  const handleComplete = (completeId: number) => {
+    const newTodos = todos.filter(t => t.id !== completeId);
     setTodos(newTodos);
   };
+
   return (
     <>
       <Header

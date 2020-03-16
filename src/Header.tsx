@@ -1,7 +1,5 @@
-import React, { FC } from "react";
+import React from "react";
 import styled from "styled-components";
-
-import InputForm from "./Form/InputForm";
 
 const Head = styled.header`
   background-color: #fff;
@@ -10,15 +8,9 @@ const Head = styled.header`
 
 const H1 = styled.h1``;
 
-interface Props {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  inputText: string;
-}
-
-const Header: FC<Props> = ({ onChange, inputText }) => (
+const Header = () => (
   <Head>
     <H1>A-Day</H1>
-    <InputForm onChange={onChange} placeholder="Your Todos" value={inputText} />
   </Head>
 );
 

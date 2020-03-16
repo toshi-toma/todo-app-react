@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 import InputForm from "./Form/InputForm";
 
-const Head = styled.header``;
+const Head = styled.header`
+  background-color: #fff;
+  color: #000;
+`;
 
 const H1 = styled.h1``;
 
@@ -14,7 +17,7 @@ interface Props {
 
 const Header: FC<Props> = ({ onChange, inputText }) => (
   <Head>
-    <H1>ToDo App</H1>
+    <H1>A-Day</H1>
     <InputForm onChange={onChange} placeholder="Your Todos" value={inputText} />
   </Head>
 );

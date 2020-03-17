@@ -6,9 +6,10 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --devtool cheap-module-source-map",
     "build": "webpack --mode production",
-    "lint": "eslint --ext .ts,.tsx src/",
-    "lint:fix": "eslint --ext .ts,.tsx src/ --fix",
-    "tsc": "tsc --noEmit",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint --ext .ts,.tsx src/",
+    "lint:ts": "tsc --noEmit",
+    "fix": "npm run lint:eslint -- --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -44,6 +45,7 @@
     "babel-loader": "8.0.6",
     "eslint": "5.16.0",
     "eslint-config-airbnb-typescript-prettier": "1.2.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "1.18.2",
     "react-docgen-typescript-loader": "3.1.1",
     "ts-loader": "6.0.4",

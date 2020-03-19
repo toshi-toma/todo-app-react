@@ -1,25 +1,24 @@
 import React from "react";
-import styled from "styled-components";
 
-import times from "./times";
-import TableHeader from "./TableHeader";
-import HourRow from "./HourRow";
+import TimeList from "./TimeList";
+import Row, { Schedule } from "./Row";
 
-const Table = styled.table`
-  width: 50%;
-  border: solid black 1px;
-`;
+export type ScheduleInfo = Schedule[];
 
-const ScheduleTable = () => {
+interface Props {
+  scheduleInfo: ScheduleInfo;
+}
+
+const ScheduleTable: React.FC<Props> = ({ scheduleInfo }) => {
   return (
-    <Table>
-      <TableHeader />
-      <tbody>
-        {times.map(time => (
-          <HourRow time={time} />
+    <div>
+      <TimeList />
+      <div>
+        {scheduleInfo.map((schedule: Schedule) => (
+          <Row schedule={schedule} />
         ))}
-      </tbody>
-    </Table>
+      </div>
+    </div>
   );
 };
 

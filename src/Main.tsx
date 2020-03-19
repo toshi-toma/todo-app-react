@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <main>
       <TodoContainer />
-      <ScheduleContainer />
+      <ScheduleContainer scheduleInfo={[]} />
     </main>
   );
 };

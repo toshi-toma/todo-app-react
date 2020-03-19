@@ -1,11 +1,16 @@
 import React from "react";
-import ScheduleTable from "./ScheduleTable";
 
-const ScheduleContainer = () => {
+import ScheduleTable, { ScheduleInfo } from "./ScheduleTable";
+
+interface Props {
+  scheduleInfo: ScheduleInfo;
+}
+
+const ScheduleContainer: React.FC<Props> = ({ scheduleInfo }) => {
   return (
     <>
       <h2>{new Date().toDateString()}</h2>
-      <ScheduleTable />
+      <ScheduleTable scheduleInfo={scheduleInfo} />
     </>
   );
 };

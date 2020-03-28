@@ -38,6 +38,7 @@ const TodoContainer = () => {
   return (
     <>
       <InputForm
+        handleSubmit={handleSubmit}
         onChange={handleNewTodoKeyDown}
         placeholder="Your Todos"
         value={inputText}

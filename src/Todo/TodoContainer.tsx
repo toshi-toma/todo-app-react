@@ -13,9 +13,7 @@ const TodoContainer = () => {
   const [inputText, setInputText] = React.useState("");
   const handleNewTodoKeyDown = (event: React.ChangeEvent<HTMLInputElement>) => {
     const val = event.target.value;
-    if (val) {
-      setInputText(val);
-    }
+    setInputText(val);
   };
   const handleSubmit = () => {
     if (!inputText) {

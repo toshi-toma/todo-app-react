@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 import Todo from "./Todo";
 
-const List = styled.ul``;
+const List = styled.ul`
+  list-style: none;
+`;
 
 type Todo = {
   id: number;

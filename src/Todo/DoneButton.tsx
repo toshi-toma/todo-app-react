@@ -2,9 +2,18 @@ import React, { FC } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  background-color: #454545;
-  color: #fff;
+  background-color: #fff;
+  border-color: gray;
+  color: gray;
+  width: 16px;
+  height: 16px;
   margin: 5px;
+  cursor: pointer;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
 `;
 
 interface Props {
@@ -12,7 +21,7 @@ interface Props {
 }
 
 const DoneButton: FC<Props> = ({ handleClick }) => (
-  <Button onClick={handleClick}>Done</Button>
+  <Button onClick={handleClick} />
 );
 
 export default DoneButton;

@@ -27,7 +27,7 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
@@ -40,7 +40,7 @@
     "@types/react-dom": "16.8.5",
     "@types/storybook__addon-actions": "3.4.3",
     "@types/storybook__react": "4.0.2",
-    "@types/styled-components": "4.1.18",
+    "@types/styled-components": "5.1.10",
     "@types/webpack": "4.32.1",
     "babel-loader": "8.0.6",
     "eslint": "5.16.0",
